@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<resume>
+	<buttons>
+		<button url="">Home</button>
+		<button url="">Resume</button>
+		<button url="">Responsive Design</button>
+		<button url="">Thirty Three Circle</button>
+		<button url="">NBA Schedule</button>
+		<button url="">Git Repository</button>
+		<button url="">Speckwood Inc</button>
+		<button url="">Solutions That Fly</button>
+		<button url="">Vintage of Paul</button>
+		<button url="">Lee Beasley</button>
+		<button url="">Chess</button>
+		<button url="">Favorite Links</button>
+		<button url="">HTML5 Local Storage</button>
+		<button url="">Fibonacci</button>
+		<button url="">Composite Pattern</button>
+	</buttons>
+</resume>

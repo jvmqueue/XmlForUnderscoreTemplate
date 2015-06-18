@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<resume>
+	<title>
+		<strHeader>EDUCATION</strHeader>
+		<section>
+			<strDate>1999 - 2000</strDate>
+			<location>
+				<strCertificate>ARCHITECTURE DIPLOMA</strCertificate>
+				<strInstitution>Pacific Design Academy</strInstitution>
+				<strLocation>Victoria, BC</strLocation>
+				<strStudyField>(Arch)</strStudyField>
+			</location>
+		</section>
+		<section>
+			<strDate>Test String Date</strDate>
+			<location>
+				<strCertificate>South Dakota State Univesity</strCertificate>
+				<strInstitution>Some Other Academy</strInstitution>
+				<strLocation>Brookings, SD</strLocation>
+				<strStudyField>(Art)</strStudyField>
+			</location>			
+		</section>
+		<section>
+			<strDate>1111 - 2222</strDate>
+			<location>
+				<strCertificate>Dalhusie Univesity</strCertificate>
+				<strInstitution>Some Other Academy</strInstitution>
+				<strLocation>Halifax, NS</strLocation>
+				<strStudyField>(Arch)</strStudyField>
+			</location>			
+		</section>		
+		<section>
+			<strDate>2222 - 3333</strDate>
+			<location>
+				<strCertificate>Dalhusie Univesity</strCertificate>
+				<strInstitution>Some Other Academy</strInstitution>
+				<strLocation>Halifax, NS</strLocation>
+				<strStudyField>(Arch)</strStudyField>
+			</location>			
+		</section>				
+	</title>
+</resume>
