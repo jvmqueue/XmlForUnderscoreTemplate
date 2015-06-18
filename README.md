@@ -37,19 +37,19 @@
             │   │   └── buttons.xml
             │   │   └── education.xml
             │   ├── scripts
-            │   │   └── base
-            │   │         └── bower_components
-            │   │               └── backbone
-            │   │               └── bootstrap
-            │   │               └── jquery
-            │   │               └── underscore            
-            │   │         └── require-2.1.17.js
             │   │   └── config.js
             │   │   └── main.js
             │   │   └── regex.js
             │   │   └── template.js
             │   │   └── util.js
-            │   │   └── xml.js
+            │   │   └── xml.js            
+            │   │   └── base
+            │   │         └── require-2.1.17.js            
+            │   │         └── bower_components
+            │   │               └── backbone
+            │   │               └── bootstrap
+            │   │               └── jquery
+            │   │               └── underscore            
             │   │ 
             │   ├── styles
             │   │   └── main.css
