@@ -16,6 +16,7 @@
 </ul>
 <h3>Stategies and Techniques</h3>
 <ul>
+    <li>Require JS for AMD patterns</li>
     <li>Custom JS libraries for code reusabiltiy</li>
     <li>OO JS to persist data and access private members</li>
     <li>Underscore JS for seperation of HTML templates from static markup</li>
