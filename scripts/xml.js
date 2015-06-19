@@ -1,7 +1,6 @@
 define([''], function(){ // Registered in config.js
     var mData = null; // private
     var _fnc = {
-        data:null,
         Xml:function(paramData){
             if(paramData){ // differnet ways of instantiating, but has to be instantiated at least once with paramData
                 this.set(paramData);                
