@@ -2,7 +2,6 @@
 require(['template' ,'util', 'xml'], function(template, util, xml){ // load and use modules
     var w = window, d = document;
     var $mNode = null;
-
     var getLclData = function(options){
         var strPath = options.path;
         var blnCache = false;
