@@ -20,7 +20,7 @@
     <li>Config.js for loading dependencies. HTML has a single script tag.</li>
     <li>Custom JS libraries for code reusabiltiy</li>
     <li>OO JS to persist data and access private members</li>
-    <li>Underscore JS for seperation of HTML templates from static markup</li>
+    <li>Underscore JS for separation of HTML templates from static markup</li>
     <li>XML for server side data</li>
     <li>Custom event listeners to avoid using setIntervals</li>
     <li>Bootstrap for responsive design</li>
