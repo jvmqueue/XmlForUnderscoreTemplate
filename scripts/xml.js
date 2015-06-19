@@ -6,7 +6,7 @@ define([''], function(){ // Registered in config.js
                 this.set(paramData);                
             } 
         }
-    }; // End _fnc
+    }; // End _fnc ...
     _fnc.Xml.prototype = {
         getFirstParent:function(){
             this.doc = this.get();
