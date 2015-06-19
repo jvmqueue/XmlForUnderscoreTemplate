@@ -13,6 +13,7 @@ define([''], function(){ // Registered in config.js
             return this.doc.firstChild;
         },
         getChildren:function(paramTagName){
+            this.doc = this.doc || this.get(); // ensure doc exists
             return this.doc.getElementsByTagName(paramTagName);
         },
         getNodeNameAndValues:function(paramTagName){
