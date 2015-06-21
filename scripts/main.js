@@ -57,20 +57,23 @@ require(['template' ,'util', 'xml'], function(template, util, xml){ // load and 
             var strSelector = '#' + strId;
             var $nodeTarget = $(strSelector);
             var strPath = 'data/home.xml';
+            var strTemplatePath = null;
             var strEventXmlDataResponse = 'response:xml';
             switch(strId){
                 case 'btn0':
-                    util.fnc.setListener({
-                        selector:strSelector, 
-                        event:strEventXmlDataResponse, 
-                        data:{templatePath:'templates/home.html'}, 
-                        listener:listener.renderContent
-                    });
+                    strTemplatePath = 'templates/home.html';
                     getLclData({$node:$nodeTarget, event:strEventXmlDataResponse, path:strPath}); // fires strEventXmlDataResponse when data retrieved
                     break;
                 default:
                     // TODO: throw exception
             } // End switch
+
+            util.fnc.setListener({ // vars set in switch block, now simply apply them
+                selector:strSelector, 
+                event:strEventXmlDataResponse, 
+                data:{templatePath:strTemplatePath}, 
+                listener:listener.renderContent
+            });            
         }
 
     }; // End listener
