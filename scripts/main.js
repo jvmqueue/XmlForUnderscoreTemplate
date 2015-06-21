@@ -28,7 +28,7 @@ require(['template' ,'util', 'xml'], function(template, util, xml){ // load and 
 
     var listener = {
         setXmlData:function(e, paramData){
-            var strEventName = e.data.event;
+            var strEventName = e.data.event; // defined during intialization of listener
             // set data on xml.fnc.Xml
             var objXml = new xml.fnc.Xml(paramData);
             $mNode.trigger(strEventName); // trigger custom listener defined in main()            
@@ -45,7 +45,12 @@ require(['template' ,'util', 'xml'], function(template, util, xml){ // load and 
             var $nodeExist = $('#mainContent');
             var doc = new xml.fnc.Xml(paramData);
             var hashData = doc.getNodeNameAndValues('lineItem');
-            template.fnc.populateMainContent( {$nodeContainer:$nodeExist, hashNameValues:hashData } );
+            var strTemplatePath = e.data.templatePath;
+            template.fnc.populateMainContent( {
+                $nodeContainer:$nodeExist, 
+                hashNameValues:hashData,
+                templatePath:strTemplatePath
+            } );
         },
         buttonEvents:function(e){
             var strId = e.target.id;
@@ -55,8 +60,13 @@ require(['template' ,'util', 'xml'], function(template, util, xml){ // load and 
             var strEventXmlDataResponse = 'response:xml';
             switch(strId){
                 case 'btn0':
-                    util.fnc.setListener({selector:strSelector, event:strEventXmlDataResponse, data:{}, listener:listener.renderContent});
-                    getLclData({$node:$nodeTarget, event:strEventXmlDataResponse, path:strPath});
+                    util.fnc.setListener({
+                        selector:strSelector, 
+                        event:strEventXmlDataResponse, 
+                        data:{templatePath:'templates/home.html'}, 
+                        listener:listener.renderContent
+                    });
+                    getLclData({$node:$nodeTarget, event:strEventXmlDataResponse, path:strPath}); // fires strEventXmlDataResponse when data retrieved
                     break;
                 default:
                     // TODO: throw exception
@@ -72,7 +82,6 @@ require(['template' ,'util', 'xml'], function(template, util, xml){ // load and 
         var strEventXmlData = 'http:responseXmlData';
         var strEventXmlDataSet = 'xmlData:set';
         var strPath = 'data/buttons.xml';
-        var objData = {}; // any data we want to send to the listener
         var fncListenerXmlData = listener.setXmlData;
         var fncListenerInitButtons = listener.initHtmlButtons;
         var fncListenerSetBtnEvents = listener.setButtonEvents;
@@ -81,7 +90,7 @@ require(['template' ,'util', 'xml'], function(template, util, xml){ // load and 
         // when xml data retrieved fire strEventXmlData
         // fncListenerXml fires strEventXmlDataSet once it sets data
         util.fnc.setListener({selector:strSelector, event:strEventXmlData, data:{event:strEventXmlDataSet}, listener:fncListenerXmlData});
-        util.fnc.setListener({selector:strSelector, event:strEventXmlDataSet, data:objData, listener:fncListenerInitButtons});
+        util.fnc.setListener({selector:strSelector, event:strEventXmlDataSet, data:{}, listener:fncListenerInitButtons});
         getLclData({$node:$mNode, event:strEventXmlData, path:strPath});
     };
 
