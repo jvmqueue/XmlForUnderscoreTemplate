@@ -6,11 +6,13 @@ require(['template' ,'util', 'xml'], function(template, util, xml){ // load and 
         var strPath = options.path;
         var blnCache = false;
         var strFileType = options.fileType || 'xml';
+        var nodeNameXml = options.nodeXml || '';
         var response = util.fnc.getData({ // not explicitly using the response. util.getData sends response to event handler
             $node:options.$node, 
-            event:options.event || '', // event defined in main
+            event:options.event || '', // event defined in main or during button click events
             path:strPath, 
             fileType:strFileType, 
+            tagNameXml:nodeNameXml,
             cache:blnCache
         });
     };
@@ -41,10 +43,11 @@ require(['template' ,'util', 'xml'], function(template, util, xml){ // load and 
            template.fnc.populateControls( {$nodeContainer:$nodeExist, hashNameValues:hashData} );
            setButtonEvents();
         },
-        renderContent:function(e, paramData){
+        renderContent:function(e, paramData, paramXmlTagName){
             var $nodeExist = $('#mainContent');
             var doc = new xml.fnc.Xml(paramData);
-            var hashData = doc.getNodeNameAndValues('lineItem');
+            var tagNameXml = paramXmlTagName;
+            var hashData = doc.getNodeNameAndValues(tagNameXml);
             var strTemplatePath = e.data.templatePath;
             template.fnc.populateMainContent( {
                 $nodeContainer:$nodeExist, 
@@ -59,16 +62,19 @@ require(['template' ,'util', 'xml'], function(template, util, xml){ // load and 
             var strPath = null;
             var strTemplatePath = null;
             var strEventXmlDataResponse = 'response:xml';
+            var strXmlNode = null;
+
             switch(strId){
                 case 'btn0':
                     strPath = 'data/home.xml';
                     strTemplatePath = 'templates/home.html';
+                    strXmlNode = 'lineItem';
                     break;
                 default:
                     // TODO: throw exception
             } // End switch
-            
-            getLclData({$node:$nodeTarget, event:strEventXmlDataResponse, path:strPath}); // fires strEventXmlDataResponse when data retrieved
+
+            getLclData({$node:$nodeTarget, event:strEventXmlDataResponse, path:strPath, nodeXml:strXmlNode}); // fires strEventXmlDataResponse when data retrieved
             util.fnc.setListener({ // vars set in switch block, now simply apply them
                 selector:strSelector, 
                 event:strEventXmlDataResponse, 
