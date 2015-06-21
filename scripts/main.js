@@ -70,6 +70,11 @@ require(['template' ,'util', 'xml'], function(template, util, xml){ // load and 
                     strTemplatePath = 'templates/home.html';
                     strXmlNode = 'lineItem';
                     break;
+                case 'btn1':
+                    strPath = 'data/resume.xml';
+                    strTemplatePath = 'templates/resume.html';
+                    strXmlNode = 'lineItem';
+                    break;                    
                 default:
                     // TODO: throw exception
             } // End switch
