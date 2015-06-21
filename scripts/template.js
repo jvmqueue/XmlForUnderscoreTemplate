@@ -42,16 +42,17 @@ define(['underscore' ,'util', 'xml', 'regex'], function(_, util, xml, regEx){
             var $nodeExist = options.$nodeContainer;
             var hash = options.hashNameValues;
             var strEvent = 'retrieved:template';
+            var strTemplatePath = options.templatePath;
             var strSelector = '#' + $nodeExist.attr('id');
 
-            util.fnc.setListener({
+            util.fnc.setListener({ // define the listener
                 selector:strSelector,
                 event:strEvent,
                 data:hash,
                 listener:listenerPopulateMainContent
             });
-            var req = util.fnc.getData({
-                path:'templates/home.html',
+            var req = util.fnc.getData({ // fires listener once data retrieved
+                path:strTemplatePath,
                 cache:false,
                 fileType:'text',
                 $node:$nodeExist,
