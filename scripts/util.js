@@ -13,12 +13,13 @@ define([], function(){
             'file':options.fileType === 'xml' ? jQuery.parseXML : '',
             crossDomain:false,
             dataType:( !!options.fileType ? options.fileType : 'xml' ),
+            tagNameXml:options.tagNameXml || '',
             ifModified:true,
             $node:options.$node || false,
             event:options.event || false,
             success:function(paramData){
               if(!!options.event){
-                options.$node.triggerHandler(options.event, [paramData]);
+                options.$node.triggerHandler(options.event, [paramData, options.tagNameXml]);
               }
             },
             statusCode:{
