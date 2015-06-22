@@ -13,6 +13,7 @@ require(['template' ,'util', 'xml'], function(template, util, xml){ // load and 
             path:strPath, 
             fileType:strFileType, 
             tagNameXml:nodeNameXml,
+            $context:options.$context,
             cache:blnCache
         });
     };
@@ -29,11 +30,15 @@ require(['template' ,'util', 'xml'], function(template, util, xml){ // load and 
     };
 
     var listener = {
-        setXmlData:function(e, paramData){
+        setXmlData:function(e, paramData, paramXmlTagName, $paramThis){
+            var $that = $paramThis;
             var strEventName = e.data.event; // defined during intialization of listener
             // set data on xml.fnc.Xml
+            console.group('SET XML DATA');
+                console.log('$that:\t', $that);
+               console.groupEnd(); 
             var objXml = new xml.fnc.Xml(paramData);
-            $mNode.trigger(strEventName); // trigger custom listener defined in main()            
+            $mNode.triggerHandler(strEventName); // trigger custom listener defined in main()            
         },
         initHtmlButtons:function(e){
             var doc = new xml.fnc.Xml();
@@ -94,6 +99,7 @@ require(['template' ,'util', 'xml'], function(template, util, xml){ // load and 
     var main = function(){
         var strSelector = '#container';
         $mNode = $(strSelector);
+        var $context = $('#mainContent.colRight');
         var strEventXmlData = 'http:responseXmlData';
         var strEventXmlDataSet = 'xmlData:set';
         var strPath = 'data/buttons.xml';
@@ -106,7 +112,7 @@ require(['template' ,'util', 'xml'], function(template, util, xml){ // load and 
         // fncListenerXml fires strEventXmlDataSet once it sets data
         util.fnc.setListener({selector:strSelector, event:strEventXmlData, data:{event:strEventXmlDataSet}, listener:fncListenerXmlData});
         util.fnc.setListener({selector:strSelector, event:strEventXmlDataSet, data:{}, listener:fncListenerInitButtons});
-        getLclData({$node:$mNode, event:strEventXmlData, path:strPath});
+        getLclData({$node:$mNode, event:strEventXmlData, path:strPath, $context:$context});
     };
 
     var mainInterval = w.setInterval(function(){ // wait for DOM, we dont need jQuery for this
