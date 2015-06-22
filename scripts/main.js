@@ -34,9 +34,6 @@ require(['template' ,'util', 'xml'], function(template, util, xml){ // load and 
             var $that = $paramThis;
             var strEventName = e.data.event; // defined during intialization of listener
             // set data on xml.fnc.Xml
-            console.group('SET XML DATA');
-                console.log('$that:\t', $that);
-               console.groupEnd(); 
             var objXml = new xml.fnc.Xml(paramData);
             $mNode.triggerHandler(strEventName); // trigger custom listener defined in main()            
         },
