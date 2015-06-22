@@ -9,7 +9,7 @@ define([], function(){
         var noCache = new Date().getMilliseconds();
         return $.ajax({ // return the response so that callee does not have to look for reponse
             url:options.path + ( !!options.cache ? '' : '?noCache=' + noCache ),
-            context:d.body,
+            context:options.$context,
             'file':options.fileType === 'xml' ? jQuery.parseXML : '',
             crossDomain:false,
             dataType:( !!options.fileType ? options.fileType : 'xml' ),
@@ -19,7 +19,7 @@ define([], function(){
             event:options.event || false,
             success:function(paramData){
               if(!!options.event){
-                options.$node.triggerHandler(options.event, [paramData, options.tagNameXml]);
+                options.$node.triggerHandler(options.event, [paramData, options.tagNameXml, this]);
               }
             },
             statusCode:{
