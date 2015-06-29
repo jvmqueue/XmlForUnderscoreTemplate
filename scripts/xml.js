@@ -44,7 +44,7 @@ define([''], function(){ // Registered in config.js
             for(var i = 0; i < len; i++){
                 arryAttributes[attributes[i].name] = attributes[i].value;
             }
-            paramHash['attributes'] = arryAttributes;
+            paramHash['attributes'] = arryAttributes; // do not have to return paramHash, because objects are passed by reference
         },
         set:function(paramData){
             mData = paramData; // persist data between different instances
