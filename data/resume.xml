@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <resume>
 	<lineItems>
-		<lineItem attribute="">Context Techniques</lineItem>
-        <lineItem attribute="">jQuery for DOM Manipulation</lineItem>
-        <lineItem attribute="">CSS for presentation</lineItem>
-        <lineItem attribute="">XML for data storage</lineItem>
-        <lineItem attribute="">AJAX for data retrieval and get scripts</lineItem>
-        <lineItem attribute="">Sprite for hover event</lineItem>
-        <lineItem attribute="">JSON for code organization</lineItem>
-        <lineItem attribute="">Modal, custom-built for warning dialog</lineItem>
-		<lineItem attribute="">Conditional comments for IE fixes</lineItem>
+		<lineItem class="xmlHeaderUnorderedList" data-item="context data">Context Techniques</lineItem>
+        <lineItem class="xmlUnorderedList">jQuery for DOM Manipulation</lineItem>
+        <lineItem class="xmlUnorderedList">CSS for presentation</lineItem>
+        <lineItem class="xmlUnorderedList">XML for data storage</lineItem>
+        <lineItem class="xmlUnorderedList">AJAX for data retrieval and get scripts</lineItem>
+        <lineItem class="xmlUnorderedList">Sprite for hover event</lineItem>
+        <lineItem class="xmlUnorderedList">JSON for code organization</lineItem>
+        <lineItem class="xmlUnorderedList">Modal, custom-built for warning dialog</lineItem>
+		<lineItem class="xmlUnorderedList">Conditional comments for IE fixes</lineItem>
 	</lineItems>
 </resume>
