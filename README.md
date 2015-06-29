@@ -38,6 +38,10 @@
             │   ├── data
             │   │   └── buttons.xml
             │   │   └── education.xml
+            │   ├── templates
+            │   │   └── buttons.html
+            │   │   └── home.html
+            │   │   └── resume.html                        
             │   ├── scripts
             │   │   └── config.js
             │   │   └── main.js
