@@ -6,7 +6,7 @@
 <p><a href="http://jvmqueue.com/XmlForUnderscoreTemplate/">Live URL</a></p>
 <h2>Current State</h2>
 <p>In Development</p>
-<p>Using, but not limited to:</p>
+<h2>Using, but not limited to:</h2>
 <ul>
     <li>Primitive JavaScript</li>
     <li>Object oriented JavaScript</li>
