@@ -50,9 +50,9 @@ require(['template' ,'util', 'xml'], function(template, util, xml){ // load and 
             var doc = new xml.fnc.Xml(paramData);
             var tagNameXml = paramXmlTagName;
             var hashData = doc.getNodeNameAndValues(tagNameXml);
-            var hashAttributes = doc.getAttributes(tagNameXml);
+
             var strTemplatePath = e.data.templatePath;
-            
+
             template.fnc.populateMainContent( {
                 $nodeContainer:$nodeExist, 
                 hashNameValues:hashData,
