@@ -1,5 +1,5 @@
 <h1>Using XML to Populate Underscore Templates</h1> 
-<h3>Motivation</h3>
+<h2>Motivation</h2>
 <ul>
     <li>XML is more readable than JSON</li>
 </ul>
