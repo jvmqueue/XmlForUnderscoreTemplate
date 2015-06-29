@@ -5,7 +5,9 @@
     <li>XML is more readable than JSON</li>
 </ul>
 <h2>Current State</h2>
-<p>In Development</p>
+<ul>
+    <li>In Development</li>
+</ul>
 <h2>Using, but not limited to:</h2>
 <ul>
     <li>Primitive JavaScript</li>
