@@ -1,5 +1,8 @@
 <h1>Using XML to Populate Underscore Templates</h1> 
-<p>XML is more readable than JSON</p>
+<h3>Motivation</h3>
+<ul>
+    <li>XML is more readable than JSON</li>
+</ul>
 <p><a href="http://jvmqueue.com/XmlForUnderscoreTemplate/">Live URL</a></p>
 <h2>Current State</h2>
 <p>In Development</p>
