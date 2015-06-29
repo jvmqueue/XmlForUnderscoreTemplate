@@ -27,12 +27,20 @@ define(['underscore' ,'util', 'xml', 'regex'], function(_, util, xml, regEx){
         var strFragment = '';
         var strLineItemValue = '';
         var strId = '';
+        var strClass = '';
         var template = _.template(strTemplateHtml);
         var $nodeExist = $('#mainContent'); // TODO: should be defined via parameter
 
+
         for(var i = 0, len = data.length; i < len; i++){
-               strLineItemValue = data[i].lineItem; // data from JSON so button[i] is next element. Elements are hashes having name value pairs           
-               strFragment += template(lineItemValue = strLineItemValue); // btnValue is variable defined in template
+
+            strClass = data[i]['attributes']['class'];
+            strLineItemValue = data[i].lineItem; // data from JSON so button[i] is next element. Elements are hashes having name value pairs           
+               
+            strFragment += template({ 
+                lineItemValue:strLineItemValue,
+                classValue:strClass
+            }); // btnValue is variable defined in template
         }
 
         $nodeExist.html(strFragment);
