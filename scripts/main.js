@@ -104,8 +104,6 @@ require(['template' ,'util', 'xml'], function(template, util, xml){ // load and 
         var strPath = 'data/buttons.xml';
         var fncListenerXmlData = listener.setXmlData;
         var fncListenerInitButtons = listener.initHtmlButtons;
-        var fncListenerSetBtnEvents = listener.setButtonEvents;
-
         
         // when xml data retrieved fire strEventXmlData
         // fncListenerXml fires strEventXmlDataSet once it sets data
