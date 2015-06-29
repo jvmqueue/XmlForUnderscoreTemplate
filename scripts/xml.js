@@ -21,13 +21,30 @@ define([''], function(){ // Registered in config.js
             var len = nodes.length;
             var arrayNodeVals = [];
             var hash = {};
-
+            //TODO: {nodeName:nodeValue, attributes[{name:value}, {name, value}]} AND rename getNodeNameAndValues to getNodeNameAndAttributes
             for(var i = 0; i < len; i++){
                 hash = new Object(); // clear hash
+
                 hash[nodes[i].nodeName] = nodes[i].firstChild.nodeValue;
+                if(nodes[i].attributes.length > 0){
+                    this.getAttributes(hash, nodes[i]);
+                }
+
+                
                 arrayNodeVals.push(hash);
+                
             }
             return arrayNodeVals;
+        },
+        getAttributes:function(paramHash, paramNode){
+            var attributes = paramNode.attributes;
+            var len = attributes.length; 
+            var arryAttributes = [];
+            
+            for(var i = 0; i < len; i++){
+                arryAttributes[attributes[i].name] = attributes[i].value;
+            }
+            paramHash['attributes'] = arryAttributes;
         },
         set:function(paramData){
             mData = paramData; // persist data between different instances
