@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <resume>
 	<lineItems>
-		<lineItem attribute="">Home this is the portfolio page providing a single navigation point</lineItem>
-		<lineItem attribute="">My resume with a control that allows you to download the page as a PDF or Word document</lineItem>
-		<lineItem attribute="">Thirty Three Circle is a gallery site with an random image generator</lineItem>
+		<lineItem attribute="">Context Techniques</lineItem>
+        <lineItem attribute="">jQuery for DOM Manipulation</lineItem>
+        <lineItem attribute="">CSS for presentation</lineItem>
+        <lineItem attribute="">XML for data storage</lineItem>
+        <lineItem attribute="">AJAX for data retrieval and get scripts</lineItem>
+        <lineItem attribute="">Sprite for hover event</lineItem>
+        <lineItem attribute="">JSON for code organization</lineItem>
+        <lineItem attribute="">Modal, custom-built for warning dialog</lineItem>
+		<lineItem attribute="">Conditional comments for IE fixes</lineItem>
 	</lineItems>
 </resume>
