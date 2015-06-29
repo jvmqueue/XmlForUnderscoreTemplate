@@ -15,6 +15,14 @@ body{
     background-color:#DDDD85;
 }
 
+.xmlHeaderUnorderedList{
+    list-style-type:none;
+}
+.xmlUnorderedList{
+    margin:0 0 0 1.0em;    
+    list-style-type:circle;
+}
+
 @media (max-width: 767px) and (orientation:landscape){ /* mobile landscape */
 
     .containerButton .colLeft{
